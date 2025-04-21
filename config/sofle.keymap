@@ -35,6 +35,16 @@
             #binding-cells = <0>;
             bindings = <&mo 2>, <&tog 2>, <&to 0>;
         };
+
+        hold_behaviour: hold_behaviour {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_BEHAVIOUR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            hold-while-undecided;
+            tapping-term-ms = <200>;
+        };
     };
 
     combos {
@@ -70,11 +80,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp GRAVE  &kp N1  &kp N2  &kp N3    &kp N4            &kp N5                                  &kp N6               &kp N7     &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp ESC    &kp Q   &kp W   &kp E     &kp R             &kp T                                   &kp Y                &kp U      &kp I      &kp O     &kp P     &kp APOSTROPHE
-&kp TAB    &kp A   &kp S   &kp D     &kp F             &kp G                                   &kp H                &kp J      &kp K      &kp L     &kp SEMI  &kp BACKSPACE
-&kp LSHFT  &kp Z   &kp X   &kp C     &kp V             &kp B         &kp C_MUTE    &mkp LCLK   &kp N                &kp M      &kp COMMA  &kp DOT   &kp FSLH  &kp RIGHT_SHIFT
-                   &mo 1   &kp LALT  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp SPACE     &kp RETURN  &toggle_raise_layer  &kp RCTRL  &kp RALT   &kp RGUI
+&kp GRAVE  &kp N1                   &kp N2  &kp N3    &kp N4            &kp N5                                  &kp N6               &kp N7     &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp ESC    &kp Q                    &kp W   &kp E     &kp R             &kp T                                   &kp Y                &kp U      &kp I      &kp O     &kp P     &kp APOSTROPHE
+&kp TAB    &hold_behaviour A LCTRL  &kp S   &kp D     &kp F             &kp G                                   &kp H                &kp J      &kp K      &kp L     &kp SEMI  &kp BACKSPACE
+&kp LSHFT  &kp Z                    &kp X   &kp C     &kp V             &kp B         &kp C_MUTE    &mkp LCLK   &kp N                &kp M      &kp COMMA  &kp DOT   &kp FSLH  &kp RIGHT_SHIFT
+                                    &mo 1   &kp LALT  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp SPACE     &kp RETURN  &toggle_raise_layer  &kp RCTRL  &kp RALT   &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -113,8 +123,8 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &kp PG_UP       &trans          &trans        &trans           &trans  &trans
-&trans      &kp INS       &kp PSCRN         &kp K_CMENU   &trans        &trans                          &kp PAGE_DOWN   &trans          &trans        &trans           &trans  &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &kp PG_UP       &kp HOME        &trans        &trans           &trans  &trans
+&trans      &kp INS       &kp PSCRN         &kp K_CMENU   &trans        &trans                          &kp PAGE_DOWN   &kp END         &trans        &trans           &trans  &trans
 &trans      &kp LALT      &flameshot_macro  &kp LSHFT     &trans        &kp CLCK                        &kp LEFT        &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT        &trans  &kp DELETE
 &trans      &kp K_UNDO    &kp K_CUT         &kp K_COPY    &kp K_PASTE   &trans        &trans    &trans  &msc SCRL_LEFT  &trans          &trans        &msc SCRL_RIGHT  &trans  &trans
                           &trans            &trans        &trans        &trans        &trans    &trans  &trans          &trans          &trans        &trans
