@@ -42,12 +42,13 @@
             bindings = <&kp>, <&kp>;
 
             flavor = "tap-preferred";
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <500>;
             tapping-term-ms = <340>;
-            quick-tap-ms = <175>;
+            quick-tap-ms = <340>;
 
             #binding-cells = <2>;
             hold-while-undecided;
+            retro-tap;
         };
     };
 
