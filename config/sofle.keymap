@@ -28,15 +28,8 @@
         };
     };
 
-    behaviors {
-        toggle_raise_layer: toggle_raise_layer {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TOGGLE_RAISE_LAYER";
-            #binding-cells = <0>;
-            bindings = <&mo 2>, <&tog 2>, <&to 0>;
-        };
 
-        hold_behaviour: hold_behaviour {
+        &mt {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_BEHAVIOUR";
             bindings = <&kp>, <&kp>;
@@ -50,6 +43,16 @@
             hold-while-undecided;
             retro-tap;
         };
+
+    behaviors {
+        toggle_raise_layer: toggle_raise_layer {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TOGGLE_RAISE_LAYER";
+            #binding-cells = <0>;
+            bindings = <&mo 2>, <&tog 2>, <&to 0>;
+        };
+
+
     };
 
     combos {
