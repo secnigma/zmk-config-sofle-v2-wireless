@@ -39,7 +39,7 @@
             bindings = <&mo 2>, <&tog 2>, <&to 0>;
         };
 
-        &mt {
+        mt: mt {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_BEHAVIOUR";
             bindings = <&kp>, <&kp>;
