@@ -16,6 +16,23 @@
 #define RAISE 2
 #define ADJUST 3
 
+
+    &mt {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOLD_BEHAVIOUR";
+        bindings = <&kp>, <&kp>;
+
+        flavor = "tap-preferred";
+        require-prior-idle-ms = <600>;
+        tapping-term-ms = <900>;
+        quick-tap-ms = <600>;
+
+        #binding-cells = <2>;
+        hold-while-undecided;
+        retro-tap;
+    };
+
+
 / {
     // Activate ADJUST layer by pressing raise and lower
 
@@ -39,20 +56,6 @@
             bindings = <&mo 2>, <&tog 2>, <&to 0>;
         };
 
-        mt: mt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_BEHAVIOUR";
-            bindings = <&kp>, <&kp>;
-
-            flavor = "tap-preferred";
-            require-prior-idle-ms = <600>;
-            tapping-term-ms = <900>;
-            quick-tap-ms = <600>;
-
-            #binding-cells = <2>;
-            hold-while-undecided;
-            retro-tap;
-        };
 
     };
 
