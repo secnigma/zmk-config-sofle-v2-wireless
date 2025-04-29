@@ -96,7 +96,7 @@
 &gresc           &kp Q                    &kp W   &kp E     &kp R             &kp T                                   &kp Y                &kp U      &kp I      &kp O     &kp P     &kp APOSTROPHE
 &kp LEFT_SHIFT    &mt LCTRL A  &mt LEFT_SHIFT S   &mt LALT D     &mt LEFT_GUI  F             &kp G                                   &mt RIGHT_GUI  H                &mt RIGHT_SHIFT J      &mt RIGHT_CONTROL K      &mt RALT L     &kp SEMI  &kp BACKSPACE
 &kp LEFT_CONTROL  &kp Z                    &kp X   &kp C     &kp V             &kp B         &kp C_MUTE    &mkp LCLK   &kp N                &kp M      &kp COMMA  &kp DOT   &kp FSLH  &kp RIGHT_SHIFT
-                                           &mo 1   &kp LALT  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp SPACE     &kp RETURN  &toggle_raise_layer  &kp RCTRL  &kp RALT   &kp RGUI
+                                           &mo 1   &kp LALT  &kp LALT  &kp LEFT_GUI  &kp SPACE     &kp RETURN  &toggle_raise_layer  &kp RCTRL  &kp RALT   &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -136,7 +136,7 @@
 
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1      &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &kp PG_UP       &kp HOME        &trans        &trans           &trans  &trans
-&kp GRAVE      &kp INS       &kp PSCRN         &kp K_CMENU   &trans        &trans                          &kp PAGE_DOWN   &kp END         &trans        &trans           &trans  &trans
+&kp TILDE      &kp INS       &kp PSCRN         &kp K_CMENU   &trans        &trans                          &kp PAGE_DOWN   &kp END         &trans        &trans           &trans  &trans
 &trans      &kp LALT      &flameshot_macro  &kp LSHFT     &trans        &kp CLCK                        &kp LEFT        &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT        &trans  &kp DELETE
 &trans      &kp K_UNDO    &kp K_CUT         &kp K_COPY    &kp K_PASTE   &trans        &trans    &trans  &msc SCRL_LEFT  &trans          &trans        &msc SCRL_RIGHT  &trans  &trans
                           &trans            &trans        &trans        &trans        &trans    &trans  &trans          &trans          &trans        &trans
