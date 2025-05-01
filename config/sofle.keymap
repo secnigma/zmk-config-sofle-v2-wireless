@@ -29,7 +29,6 @@
 
         #binding-cells = <2>;
         hold-while-undecided;
-        retro-tap;
     };
 
 
