@@ -26,7 +26,7 @@
         require-prior-idle-ms = <140>;
         tapping-term-ms = <200>;
         quick-tap-ms = <90>;
-        //retro-tap;
+        retro-tap;
 
         #binding-cells = <2>;
         hold-while-undecided;
