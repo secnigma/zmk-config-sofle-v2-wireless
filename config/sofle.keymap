@@ -24,8 +24,8 @@
 
         flavor = "tap-preferred";
         require-prior-idle-ms = <140>;
-        tapping-term-ms = <350>;
-        quick-tap-ms = <150>;
+        tapping-term-ms = <200>;
+        quick-tap-ms = <90>;
         //retro-tap;
 
         #binding-cells = <2>;
