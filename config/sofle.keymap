@@ -29,7 +29,8 @@
         retro-tap;
 
         #binding-cells = <2>;
-        hold-while-undecided;
+       // hold-while-undecided;
+       hold-trigger-on-release;
 
     };
 
