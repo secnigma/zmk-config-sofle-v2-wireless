@@ -24,7 +24,7 @@
 #define ADJUST 3
 
 //////////// Mod-Tap Home Row Mods Definiton //////////////////
-    &mt {
+&mt {
         compatible = "zmk,behavior-hold-tap";
         label = "HOLD_BEHAVIOUR";
         bindings = <&kp>, <&kp>;
@@ -40,22 +40,26 @@
        // Don't enable hold while undecided. It will send the mod key first, even if it was a tap
        hold-trigger-on-release;
 
-    }; //////////// End of Mod-Tap Home Row Mods Definiton //////////////////
+}; //////////// End of Mod-Tap Home Row Mods Definiton //////////////////
 
 
 / {
 
 
-//////////  Activate ADJUST layer by pressing raise and lower
+//////////  CONDITIONAL LAYERS Definition ///////////////////////////////
 
-    conditional_layers {
+conditional_layers {
         compatible = "zmk,conditional-layers";
 
+//////////  1. Activate ADJUST layer by pressing raise and lower ///////
         adjust_layer {
             if-layers = <LOWER RAISE>;
             then-layer = <ADJUST>;
         };
-    };
+
+
+}; //////////  End of CONDITIONAL LAYERS Definition ///////////////////
+
 
 
 ///////////// Behaviours Definition //////////////////////////
@@ -75,11 +79,11 @@ behaviors {
         }; //// End Behaviours ////////////////////////// 
 
 
-    };
+};
 
 
 ////////////////// KEYMAP /////////////////////////////////////
-    keymap {
+keymap {
         compatible = "zmk,keymap";
 
 
@@ -106,6 +110,9 @@ behaviors {
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };  /////////// End of 0. DEFAULT ///////////////
 
+
+
+
 /////////// 1. LOWER ///////////////
 
         lower_layer {
@@ -130,6 +137,8 @@ behaviors {
             sensor-bindings =
                 <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
         }; /////////// End of 1. LOWER ///////////////
+
+
 
 
 
@@ -159,6 +168,8 @@ behaviors {
         }; /////////// End of 2. RAISE ///////////////
 
 
+
+
 /////////// 3. ADJUST ///////////////
 
         adjust_layer {
@@ -180,8 +191,11 @@ behaviors {
         }; /////////// End of 3. ADJUST ///////////////
 
 
+
+
         extra1 { status = "reserved"; };
 
         extra2 { status = "reserved"; };
-    };
+ }; ////////////////// End of KEYMAP /////////////////////////////////////
+
 };
