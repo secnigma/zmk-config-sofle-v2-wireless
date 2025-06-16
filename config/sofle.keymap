@@ -81,7 +81,7 @@ behaviors {
         rot_msc: sensor_rotate_kp {
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
-            bindings = <&msc>, <&msc>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
         };
 
 
@@ -117,7 +117,7 @@ keymap {
             >;
 
             // sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &rot_msc SCRL_UP SCRL_DOWN >;
+            sensor-bindings = <&rot_msc >;
 
 
         };  /////////// End of 0. DEFAULT ///////////////
