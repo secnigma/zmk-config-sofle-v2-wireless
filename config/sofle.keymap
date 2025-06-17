@@ -5,6 +5,7 @@
  */
 
 ////////////////// Mouse pointing ////////////////////// 
+#include "mouse.dtsi"
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 600  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 10    // default: 10
 
@@ -115,7 +116,7 @@ keymap {
             >;
 
             // sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &rot_msc SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_msc SCRL_UP_ENCODER SCRL_DOWN_ENCODER>;
 
 
         };  /////////// End of 0. DEFAULT ///////////////
@@ -145,7 +146,7 @@ keymap {
             >;
 
             sensor-bindings =
-                <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
+                <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_msc SCRL_LEFT_ENCODER SCRL_RIGHT_ENCODER>;
         }; /////////// End of 1. LOWER ///////////////
 
 
@@ -173,7 +174,7 @@ keymap {
             >;
 
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_msc SCRL_UP_ENCODER SCRL_DOWN_ENCODER>;
 
         }; /////////// End of 2. RAISE ///////////////
 
