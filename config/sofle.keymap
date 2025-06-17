@@ -76,14 +76,6 @@ behaviors {
                 bindings = <&mo 2>, <&tog 2>, <&to 0>;
               };
 
-//////// 2. Rotary Encoder use Mouse Scrolling ////////////
-
-        rot_msc: sensor_rotate_kp {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            #sensor-binding-cells = <2>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-        };
-
 
 
 }; //// End Behaviours ////////////////////////// 
@@ -117,7 +109,7 @@ keymap {
             >;
 
             // sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-            sensor-bindings = <&rot_msc >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN %msc SCRL_UP SCRL_DOWN>;
 
 
         };  /////////// End of 0. DEFAULT ///////////////
