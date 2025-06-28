@@ -126,7 +126,7 @@ keymap {
             >;
 
             // sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_ms SCRL_DOWN_ENCODER SCRL_UP_ENCODER>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_msc SCRL_DOWN_ENCODER SCRL_UP_ENCODER>;
 
 
         };  /////////// End of 0. DEFAULT ///////////////
