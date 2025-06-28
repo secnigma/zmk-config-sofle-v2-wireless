@@ -96,9 +96,7 @@ behaviors {
         diode-direction = "col2row";
         wakeup-source;
 
-        ...
     };
-};
 
 /////////////////// END OF KEYSCAN ///////////////////////////////////
 
