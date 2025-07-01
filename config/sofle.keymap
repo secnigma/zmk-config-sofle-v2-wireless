@@ -94,7 +94,7 @@ behaviors {
         compatible = "zmk,combos";
         combo_middleclick {
             timeout-ms = <50>;
-            key-positions = <LCLK RCLK>;
+            key-positions = <26 27>;
             bindings = <&kp MCLK>;
         };
     };
