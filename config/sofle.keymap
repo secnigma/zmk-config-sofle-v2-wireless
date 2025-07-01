@@ -88,6 +88,25 @@ behaviors {
 }; //// End Behaviours ////////////////////////// 
 
 
+//////// COMBOS ////////////////////////////////
+
+    combos {
+        compatible = "zmk,combos";
+        combo_middleclick {
+            timeout-ms = <50>;
+            key-positions = <LCLK RCLK>;
+            bindings = <&kp MCLK>;
+        };
+    };
+
+
+
+/////// End of COMBOS /////////////////////////
+
+
+
+
+
 /////////////////// KEYSCAN ///////////////////////////////////
 // 1. Keyscan enabine wakeup source for deep-sleep 
 // Ref: https://zmk.dev/docs/features/low-power-states#wakeup-sources
