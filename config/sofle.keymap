@@ -174,7 +174,7 @@ keymap {
             >;
 
             sensor-bindings =
-                <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_msc SCRL_LEFT_ENCODER SCRL_RIGHT_ENCODER>;
+                <&inc_dec_msc SCRL_DOWN_ENCODER SCRL_UP_ENCODER &inc_dec_msc SCRL_LEFT_ENCODER SCRL_RIGHT_ENCODER>;
         }; /////////// End of 1. LOWER ///////////////
 
 
