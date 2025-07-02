@@ -195,8 +195,8 @@ keymap {
 
             bindings = <
 &kp TILDE    &trans           &trans              &trans               &trans          &trans                                       &kp PG_UP        &kp HOME        &trans              &trans         &trans    &trans
-&gresc       &kp INS          &mmv MOVE_UP        &trans               &trans          &trans                                       &kp PAGE_DOWN    &kp END         &trans              &trans         &trans    &kp PIPE
-&trans       &mmv MOVE_LEFT   &mmv MOVE_DOWN      &mmv MOVE_RIGHT      &kp K_CMENU     &kp CLCK                                     &kp LEFT         &kp DOWN        &kp UP_ARROW        &kp RIGHT      &trans    &kp DELETE
+&gresc       &kp INS          &mmv MOVE_UP        &trans               &trans          &kp K_CMENU                                       &kp PAGE_DOWN    &kp END         &trans              &trans         &trans    &kp PIPE
+&trans       &mmv MOVE_LEFT   &mmv MOVE_DOWN      &mmv MOVE_RIGHT      &trans          &kp CLCK                                     &kp LEFT         &kp DOWN        &kp UP_ARROW        &kp RIGHT      &trans    &kp DELETE
 &trans       &kp EQUAL        &kp MINUS           &kp PLUS             &kp LBRC        &kp RBRC    &trans               &trans      &kp LBKT         &kp RBKT        &kp SEMI            &kp COLON      &kp BSLH  &trans
                               &trans              &trans               &mkp MCLK       &mkp RCLK   &mkp LCLK            &mkp RCLK   &trans           &trans          &trans              &trans
             >;
