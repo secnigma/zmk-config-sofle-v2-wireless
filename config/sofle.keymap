@@ -82,6 +82,13 @@
             #binding-cells = <0>;
             bindings = <&mo 1>, <&tog 1>, <&to 0>;
         };
+
+        tilde_tab_tapdance: tilde_tab_tapdance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TILDE_TAB_TAPDANCE";
+            #binding-cells = <0>;
+            bindings = <&kp TILDE>, <&kp GRAVE>, <&key_repeat>;
+        };
     }; //// End Behaviours ////////////////////////// 
     //////// COMBOS ////////////////////////////////
 
@@ -125,11 +132,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp TAB               &kp N1            &kp N2        &kp N3      &kp N4          &kp N5                                         &kp N6               &kp N7             &kp N8               &kp N9      &kp N0    &kp MINUS
-&mt LEFT_SHIFT TILDE  &kp Q             &kp W         &kp E       &kp R           &kp T                                          &kp Y                &kp U              &kp I                &kp O       &kp P     &kp APOSTROPHE
-&mt LEFT_GUI ESCAPE   &mt LEFT_SHIFT A  &mt LCTRL S   &mt LALT D  &mt LEFT_GUI F  &kp G                                          &mt RIGHT_GUI H      &mt RIGHT_SHIFT J  &mt RIGHT_CONTROL K  &mt RALT L  &kp SEMI  &kp BACKSPACE
-&kp LEFT_CONTROL      &kp Z             &kp X         &kp C       &kp V           &kp B                &kp C_MUTE    &mkp LCLK   &kp N                &kp M              &kp COMMA            &kp DOT     &kp FSLH  &kp BACKSLASH
-                                        &kp LEFT_GUI  &kp LALT    &kp LALT        &toggle_lower_layer  &kp SPACE     &kp RETURN  &toggle_raise_layer  &kp RCTRL          &kp RALT             &kp RGUI
+&tilde_tab_tapdance  &kp N1            &kp N2        &kp N3      &kp N4          &kp N5                                         &kp N6               &kp N7             &kp N8               &kp N9      &kp N0    &kp MINUS
+&mt LEFT_SHIFT TAB   &kp Q             &kp W         &kp E       &kp R           &kp T                                          &kp Y                &kp U              &kp I                &kp O       &kp P     &kp APOSTROPHE
+&mt LEFT_GUI ESCAPE  &mt LEFT_SHIFT A  &mt LCTRL S   &mt LALT D  &mt LEFT_GUI F  &kp G                                          &mt RIGHT_GUI H      &mt RIGHT_SHIFT J  &mt RIGHT_CONTROL K  &mt RALT L  &kp SEMI  &kp BACKSPACE
+&kp LEFT_CONTROL     &kp Z             &kp X         &kp C       &kp V           &kp B                &kp C_MUTE    &mkp LCLK   &kp N                &kp M              &kp COMMA            &kp DOT     &kp FSLH  &kp BACKSLASH
+                                       &kp LEFT_GUI  &kp LALT    &kp LALT        &toggle_lower_layer  &kp SPACE     &kp RETURN  &toggle_raise_layer  &kp RCTRL          &kp RALT             &kp RGUI
             >;
 
             // Encoder Left and Right settings
