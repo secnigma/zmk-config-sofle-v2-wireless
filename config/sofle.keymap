@@ -23,6 +23,8 @@
 #define ADJUST 3
 
 //////////// Mod-Tap Home Row Mods Definiton //////////////////
+//////////// End of Mod-Tap Home Row Mods Definiton //////////////////
+///////////////////////////// MAIN /////////////////////////////////////////
 
 &mt {
     compatible = "zmk,behavior-hold-tap";
@@ -35,13 +37,8 @@
     quick-tap-ms = <90>;
     retro-tap;
     #binding-cells = <2>;
-
-    // hold-while-undecided; 
-    // Don't enable hold while undecided. It will send the mod key first, even if it was a tap
-
     hold-trigger-on-release;
-}; //////////// End of Mod-Tap Home Row Mods Definiton //////////////////
-///////////////////////////// MAIN /////////////////////////////////////////
+};
 
 / {
     //////////  CONDITIONAL LAYERS Definition ///////////////////////////////
@@ -160,7 +157,7 @@
 &kp GRAVE  &kp F1     &kp F2     &kp F3    &kp F4    &kp F5                       &kp F6     &kp F7    &kp F8     &kp F9     &kp F10   &kp F11
 &kp TILDE  &kp N1     &kp N2     &kp N3    &kp N4    &kp N5                       &kp N6     &kp N7    &kp N8     &kp N9     &kp N0    &kp F12
 &trans     &kp EXCL   &kp AT     &kp HASH  &kp DLLR  &kp PRCNT                    &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR   &kp RPAR  &kp PIPE
-&trans     &kp EQUAL  &kp MINUS  &kp PLUS  &kp LBRC  &kp RBRC   &trans    &trans  &kp LBKT   &kp RBKT  &kp SEMI   &kp COLON  &kp BSLH  &trans
+&trans     &kp EQUAL  &kp MINUS  &kp PLUS  &kp LBRC  &kp RBRC   &trans    &tog 0  &kp LBKT   &kp RBKT  &kp SEMI   &kp COLON  &kp BSLH  &trans
                       &trans     &trans    &trans    &trans     &trans    &trans  &trans     &trans    &kp GRAVE  &kp TILDE
             >;
 
@@ -182,7 +179,7 @@
 &kp GRAVE       &trans          &trans          &trans           &trans     &trans                               &kp PG_UP      &kp HOME   &trans        &trans     &trans     &trans
 &kp TILDE       &kp INS         &mmv MOVE_UP    &trans           &trans     &kp K_CMENU                          &kp PAGE_DOWN  &kp END    &trans        &trans     &trans     &kp PIPE
 &kp LEFT_SHIFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans     &kp CLCK                             &kp LEFT       &kp DOWN   &kp UP_ARROW  &kp RIGHT  &trans     &kp DELETE
-&trans          &kp EQUAL       &kp MINUS       &kp PLUS         &kp LBRC   &kp RBRC     &trans       &trans     &kp LBKT       &kp RBKT   &kp SEMI      &kp COLON  &kp SLASH  &kp BACKSLASH
+&trans          &kp EQUAL       &kp MINUS       &kp PLUS         &kp LBRC   &kp RBRC     &trans       &tog 0     &kp LBKT       &kp RBKT   &kp SEMI      &kp COLON  &kp SLASH  &kp BACKSLASH
                                 &trans          &trans           &mkp MCLK  &mkp RCLK    &mkp LCLK    &mkp RCLK  &mkp LCLK      &mkp MCLK  &kp GRAVE     &kp TILDE
             >;
 
