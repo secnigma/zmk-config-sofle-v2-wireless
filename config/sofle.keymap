@@ -64,6 +64,8 @@
             then-layer = <ADJUST>;
         };
     }; //////////  End of CONDITIONAL LAYERS Definition ///////////////////
+
+
     ///////////// Behaviours Definition //////////////////////////
 
     behaviors {
@@ -84,13 +86,16 @@
             bindings = <&msc>, <&msc>;
         };
 
+        //////// 3. Double Tap Lower Layer to Lock Layer ////////////
+
         toggle_lower_layer: toggle_lower_layer {
             compatible = "zmk,behavior-tap-dance";
             label = "TOGGLE_LOWER_LAYER";
             #binding-cells = <0>;
-            bindings = <&mo 1>, <&tog 1>, <&to 0>;
+            bindings = <&mo 1>, <&to 1>, <&to 0>;
         };
 
+      //////// 4. Grave double tap to Tilde (EXPERIMENTAL) ////////////
         tilde_tab_tapdance: tilde_tab_tapdance {
             compatible = "zmk,behavior-tap-dance";
             label = "TILDE_TAB_TAPDANCE";
@@ -98,10 +103,13 @@
             bindings = <&kp GRAVE>, <&kp TAB>, <&key_repeat>;
         };
     }; //// End Behaviours ////////////////////////// 
+
     //////// COMBOS ////////////////////////////////
 
     combos {
         compatible = "zmk,combos";
+
+ //////// 1. Press Both Thumbs for Mouse middle click ////////////
 
         combo_middleclick {
             timeout-ms = <50>;
@@ -111,6 +119,11 @@
     };
 
     /////// End of COMBOS /////////////////////////
+
+
+
+
+
     /////////////////// KEYSCAN ///////////////////////////////////
     // 1. Keyscan enabine wakeup source for deep-sleep 
     // Ref: https://zmk.dev/docs/features/low-power-states#wakeup-sources
@@ -122,6 +135,15 @@
     };
 
     /////////////////// END OF KEYSCAN ///////////////////////////////////
+
+
+
+
+
+
+
+
+
     ////////////////// KEYMAP /////////////////////////////////////
 
     keymap {
