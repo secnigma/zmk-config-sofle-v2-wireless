@@ -22,9 +22,34 @@
 #define RAISE 2
 #define ADJUST 3
 
+
+
+
 //////////// Mod-Tap Home Row Mods Definiton //////////////////
+
+
+
+&mt {
+    compatible = "zmk,behavior-hold-tap";
+    label = "HOLD_BEHAVIOUR";
+    bindings = <&kp>, <&kp>;
+
+    flavor = "tap-preferred";
+    require-prior-idle-ms = <140>;
+    tapping-term-ms = <200>;
+    quick-tap-ms = <90>;
+    retro-tap;
+    #binding-cells = <2>;
+    hold-trigger-on-release;
+};
+
+
 //////////// End of Mod-Tap Home Row Mods Definiton //////////////////
+
+
+
 ///////////////////////////// MAIN /////////////////////////////////////////
+
 
 / {
     //////////  CONDITIONAL LAYERS Definition ///////////////////////////////
