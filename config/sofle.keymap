@@ -48,7 +48,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TOGGLE_RAISE_LAYER";
             #binding-cells = <0>;
-            bindings = <&mo 2>, <&tog 2>, <&to 0>;
+            bindings = <&mo 2>, <&to 2>, <&to 0>;
         };
 
         //////// 2. Rotary Encoder use Mouse Scrolling ////////////
@@ -162,7 +162,7 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&kp GRAVE       &trans          &trans          &trans           &trans     &trans                               &kp PG_UP      &kp HOME   &trans        &trans     &kp EQUAL  &trans
+&kp GRAVE       &trans          &trans          &trans           &trans     &trans                               &kp PG_UP      &kp HOME   &trans        &trans     &kp EQUAL  &toggle_raise_layer
 &kp TILDE       &kp INS         &mmv MOVE_UP    &trans           &trans     &kp K_CMENU                          &kp PAGE_DOWN  &kp END    &trans        &trans     &trans     &kp PIPE
 &kp LEFT_SHIFT  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans     &kp CLCK                             &kp LEFT       &kp DOWN   &kp UP_ARROW  &kp RIGHT  &trans     &kp DELETE
 &trans          &kp EQUAL       &kp MINUS       &kp PLUS         &kp LBRC   &kp RBRC     &trans       &tog 0     &kp LBKT       &kp RBKT   &kp SEMI      &kp COLON  &kp SLASH  &kp BACKSLASH
